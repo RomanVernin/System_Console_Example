@@ -1,0 +1,24 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst jtag_to_pio_pd.master_0.clk_rst -pg 1
+preplace inst jtag_to_pio_pd.master_0.b2p_adapter -pg 1
+preplace inst jtag_to_pio_pd.master_0.transacto -pg 1
+preplace inst jtag_to_pio_pd.master_0.p2b -pg 1
+preplace inst jtag_to_pio_pd.master_0.b2p -pg 1
+preplace inst jtag_to_pio_pd.master_0.fifo -pg 1
+preplace inst jtag_to_pio_pd.master_0.timing_adt -pg 1
+preplace inst jtag_to_pio_pd.clk_0 -pg 1 -lvl 1 -y 140
+preplace inst jtag_to_pio_pd.master_0 -pg 1 -lvl 2 -y 50
+preplace inst jtag_to_pio_pd -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst jtag_to_pio_pd.master_0.p2b_adapter -pg 1
+preplace inst jtag_to_pio_pd.master_0.clk_src -pg 1
+preplace inst jtag_to_pio_pd.pio_0 -pg 1 -lvl 3 -y 100
+preplace inst jtag_to_pio_pd.master_0.jtag_phy_embedded_in_jtag_master -pg 1
+preplace netloc FAN_OUT<net_container>jtag_to_pio_pd</net_container>(MASTER)clk_0.clk,(SLAVE)master_0.clk,(SLAVE)pio_0.clk) 1 1 2 270 150 530
+preplace netloc EXPORT<net_container>jtag_to_pio_pd</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)jtag_to_pio_pd.reset_i) 1 0 1 NJ
+preplace netloc EXPORT<net_container>jtag_to_pio_pd</net_container>(SLAVE)clk_0.clk_in,(SLAVE)jtag_to_pio_pd.clk_i) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>jtag_to_pio_pd</net_container>(SLAVE)pio_0.reset,(MASTER)master_0.master_reset,(SLAVE)master_0.clk_reset,(MASTER)clk_0.clk_reset) 1 1 2 290 170 550
+preplace netloc EXPORT<net_container>jtag_to_pio_pd</net_container>(SLAVE)pio_0.external_connection,(SLAVE)jtag_to_pio_pd.pio_o) 1 0 3 NJ 130 NJ 130 NJ
+preplace netloc POINT_TO_POINT<net_container>jtag_to_pio_pd</net_container>(MASTER)master_0.master,(SLAVE)pio_0.s1) 1 2 1 570
+levelinfo -pg 1 0 60 760
+levelinfo -hier jtag_to_pio_pd 70 100 370 600 750

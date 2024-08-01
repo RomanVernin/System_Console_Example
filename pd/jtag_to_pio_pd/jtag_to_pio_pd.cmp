@@ -1,0 +1,8 @@
+	component jtag_to_pio_pd is
+		port (
+			clk_i_clk       : in  std_logic                    := 'X'; -- clk
+			pio_o_export    : out std_logic_vector(7 downto 0);        -- export
+			reset_i_reset_n : in  std_logic                    := 'X'  -- reset_n
+		);
+	end component jtag_to_pio_pd;
+
